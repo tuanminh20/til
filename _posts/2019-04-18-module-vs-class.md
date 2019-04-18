@@ -37,6 +37,12 @@ end
 Human.new.a_method
 # a_method
 
+Human.new.b_method
+# NoMethodError: undefined method `b_method' for #<Human:0x00559a416bc4f8>
+
+Human.a_method
+# NoMethodError: undefined method `a_method' for Human:Class
+
 Human.b_method
 # b_method
 ```
