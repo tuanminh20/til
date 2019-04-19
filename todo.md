@@ -1,7 +1,7 @@
 1. Module và Class giống và khác? - Minh
 2. Array và Hash giống và khác?
 3. Symbol và String giống và khác?
-4. Method setter và getter trong ruby - Son 
+4. Method setter và getter trong ruby - Son
 5. 4 tính chất OOP
 6. Private, protected và public
 7. Class method và object method (cả ruby và rails)
@@ -20,3 +20,15 @@
 20. Cache
 21. AWS basic
 22. Deploy
+
+class Polygon
+  @@sides = 10
+  def self.sides
+    @@sides
+  end
+end
+class Triangle < Polygon
+end
+
+puts Triangle.sides # => 3
+puts Polygon.sides # => 3
