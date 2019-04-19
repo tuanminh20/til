@@ -3,17 +3,20 @@ layout: post
 title: Module vs Class in Ruby
 ---
 
-|                     | class                              | module                              |
-|---------------------|------------------------------------|-------------------------------------|
-| thể hiện của nó là? | object                             | không                               |
-| superclass là?      | module                             | object                              |
-| methods             | class methods and instance methods | module methods and instance methods |
-| kế thừa             | có                                 | không                               |
-| include trong class | không thể include                  | có thể include module trong class   |
-| extend              | không thể                          | có thể                              |
+|                     | class                                  | module                                                               |
+|---------------------|----------------------------------------|----------------------------------------------------------------------|
+| có thể tạo object?  | có                                     | không                                                                |
+| dùng để??           | để tạo ra object<br>để class khác kế thừa | gộp các method lại, để tái sử dụng cho class làm namespace cho class |
+| superclass là gì?   | Object                                 | không có                                                             |
+| có hàm gì?          | class method instance method           | module method  instance method                                       |
+| kế thừa được không? | có                                     | không                                                                |
+| có thể include?     | không                                  | có, include module trong class                                       |
+| có thể extend?      | không                                  | có, extend module trong class                                        |
 
 * class include module thì object sẽ có các methods được định nghĩa trong module, **instance method**
 * class extend module thì methods sẽ đc extend như một **class method**
+
+cụ thể hơn thì xem thêm ở bài [Modules in Ruby: include, extend, prepend]({{ site.baseurl }}/2019/04/19/modules-in-ruby-include-extend-prepend/)
 
 
 ```ruby
