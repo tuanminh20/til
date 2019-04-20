@@ -5,11 +5,12 @@ title: Instance variable in Rails
 
 ### Các loại biến
 
-| Loại biến | ví dụ |
-|----------|----------|
-| local variable | `name` |
-| instance variable| `@name` |
-| global variable (class variable) | `@@name` |
+| Loại biến | ví dụ | độ phủ sóng | default |
+|----------|----------|------|-----|
+| global variable | `$name` | tất cả mọi nơi | `nil`
+| class variable  | `@@name` | all object, class con | `undefined` |
+| **instance variable** | `@name` | object self | `nil` |
+| local variable | `name` | method | `undefined` |
 
 ### Định nghĩa instance variable
 - Tên biến: bắt đầu bằng @, đi sau là tên ví dụ `@total_income`
