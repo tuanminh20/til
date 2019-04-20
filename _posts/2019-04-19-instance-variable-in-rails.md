@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Instance variable in Rails
+author:
+  name: DHS
 ---
 
 ### Các loại biến

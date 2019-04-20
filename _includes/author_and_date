@@ -1,0 +1,9 @@
+<small>
+  <span class="post-date">
+    {% if author.name != null %}
+      {{ author.name }} / {{ date | date_to_string }}
+    {% else %}
+      Anonymous / {{ date | date_to_string }}
+    {% endif %}
+  </span>
+</small>

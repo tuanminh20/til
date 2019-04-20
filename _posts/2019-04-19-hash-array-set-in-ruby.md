@@ -2,6 +2,8 @@
 layout: post
 title: Hash, Array, Set in Ruby
 date: "2019/04/19 20:23"
+author:
+  name: Minh
 ---
 
 |                       | Array                                                                                       | Hash                                                                      | Set                                  |

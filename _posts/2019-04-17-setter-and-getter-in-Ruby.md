@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Setter & Getter in Ruby
+author:
+  name: DHS
 ---
 
 ### Setter và Getter là gì

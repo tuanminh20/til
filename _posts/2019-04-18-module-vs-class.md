@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Module vs Class in Ruby
+author:
+  name: Minh
 ---
 
 |                     | class                                  | module                                                               |

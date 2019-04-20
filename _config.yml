@@ -9,7 +9,7 @@ tagline:             "by vàithằngnhốnhăng"
 description:         ''
 url:                 # http://lanyon.getpoole.com
 baseurl:             '/til'
-paginate:            5
+paginate:            100
 
 # About/contact
 author:
