@@ -10,6 +10,7 @@ description:         ''
 url:                 # http://lanyon.getpoole.com
 baseurl:             '/til'
 paginate:            100
+permalink: /:title/
 
 # About/contact
 author:
