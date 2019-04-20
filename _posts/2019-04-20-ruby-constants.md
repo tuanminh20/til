@@ -8,7 +8,7 @@ author:
 
 ## Định nghĩa
 
-* Viết hoa chữ cái đầu
+* Viết hoa chữ cái đầu (nhưng thường được viết hoa tất cả)
 * Không thể định nghĩa trong method, chỉ bên trong Class, Module
 
 ```ruby
@@ -134,4 +134,3 @@ class A
 end
 # 1
 ```
-
