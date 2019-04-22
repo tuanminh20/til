@@ -26,20 +26,24 @@ Các giải thích dễ hiểu như sau:
 
 Có một class là `Manager`, một class là nhân viên `Employee`
 
-`Manager` thì đi **ô tô**. Nhân viên thì đi **xe máy**. Về bản chất thì đây đều là xe/phương tiện đi lại. Sẽ có những **phương thức chung** như là: `start`, `drive`, `stop` v.v. Và tất nhiên cách start của xe máy và oto sẽ khác nhau rồi.
+`Manager` thì đi **ô tô**. Nhân viên thì đi **xe máy**. Về bản chất thì đây đều là xe/phương tiện đi lại. Sẽ có những **phương thức chung** như là: `start`, `drive`, `stop` v.v. Và tất nhiên cách `start` của xe máy và oto sẽ khác nhau rồi.
 
 Nên về thiết kế thì mình sẽ làm như sau
 
 ```rb
+# table managers
 class Manager
-  has_many :xe, as: :phuong_tien
-
-class Employee
-  has_many :xe, as: :phuong_tien
+  has_many :xes, as: :chu_phuong_tien
 end
 
+# table employees
+class Employee
+  has_many :xes, as: :chu_phuong_tien
+end
+
+# table xes
 class Xe
-  belongs_to :phuong_tien, polymorphic: :true
+  belongs_to :chu_phuong_tien, polymorphic: :true
 
   def start
     # ở đây ta có thể định nghĩa tuỳ theo đây là oto hay xe máy =))
@@ -53,8 +57,8 @@ khi đó bảng `xes` thì ta sẽ có các cột:
 
 ```rb
   t.string  :name
-  t.integer :phuong_tien_id
-  t.string  :phuong_tien_type
+  t.integer :chu_phuong_tien_id
+  t.string  :chu_phuong_tien_type
 ```
 
 ta cũng có những phương thức tương ứng:
@@ -66,8 +70,6 @@ ta cũng có những phương thức tương ứng:
   m.xes
   e.xes
 
-  xe = Xe.new(name: "Teslaaaaa", phuong_tien_id: 1, phuong_tien_type: "Manager")
-  xe.phuong_tien # => Manager with id=1
+  xe = Xe.new(name: "Teslaaaaa", chu_phuong_tien_id: 1, chu_phuong_tien_type: "Manager")
+  xe.chu_phuong_tien # => Manager with id=1
 ```
-
-
