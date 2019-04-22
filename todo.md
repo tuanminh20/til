@@ -4,9 +4,9 @@
 4. Method setter và getter trong ruby - Son
 5. 4 tính chất OOP - Minh
 6. Private, protected và public - Minh
-7. Class method và object method (cả ruby và rails)
+7. Class method và object method (cả ruby và rails) - Minh
 8. Luồng xử lí của 1 request từ browser đi qua những tầng nào
-9. Instance variable là gì?
+9. Instance variable là gì? - Son
 10. 7 verb method HTTP
 11. Thin controller & fat model
 12. Cách tổ chức source code của 1 project Rails
