@@ -1,6 +1,6 @@
 ---
 template: "post"
-title: "Inheritance in Rails"
+title: "Encapsulation in Rails"
 date: "2019-04-22 16:00"
 author:
   name: Minh
