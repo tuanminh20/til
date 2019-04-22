@@ -123,3 +123,33 @@ Middleware có thể sửa status code, headers, body ở phase này. Ví dụ:
 * set/edit cookie in response header
 
 ## Rails as backend, JS framework as frontend
+
+Gỉa sử ta có 2 server, 1 server chạy Rails, serve APIs, một server chạy JS Framwork như là React, VueJS, v.v,
+
+> Rails app: api.example.com, Front-end app: front.example.com
+
+Tại frontend server, phải fetch dữ liệu từ backend server thông qua API. Khi đó ta sẽ gặp phải vấn đề  Cross-Origin Resource Sharing (CORS)
+
+Để giải quyết vấn đề này, đơn giản nhất là dùng gem:
+
+```rb
+gem "rack-cors", require: "rack/cors"
+```
+
+Bản chất của gem này là insert một middleware vào đầu tiên trong danh sách middleware stack để modify header của các request từ JS front server.
+
+```rb
+module MyApp
+  class Application < Rails::Application
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins 'front.example.com'
+        resource '/api/v1',
+        :headers => :any,
+        :expose => ['X-User-Authentication-Token', 'X-User-Id'],
+        :methods => [:get, :post, :options, :patch, :delete]
+      end
+    end
+  end
+end
+```
