@@ -19,7 +19,7 @@ Bài này nói về Tính kế thừa: **Inheritance**
 ## Trong OOP nói chung
 
 * Class Con sẽ kế thừa những **thuộc tính**, **phương thức**, **constants** của class Cha, class Ông
-* có thể overide
+* có thể override
 * `super` trong method Con sẽ gọi method cùng tên trong class Cha, không tìm thấy thì sẽ tìm đến Ông, v.v
 
 ## Trong Rails nói riêng

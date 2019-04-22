@@ -1,0 +1,12 @@
+body {
+  background-color: #E9EBEE;
+}
+.post {
+  background-color: #FFF;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  margin-bottom: 3em
+}
+.masthead {
+  background-color: #FFF;
+}
