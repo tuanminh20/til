@@ -27,5 +27,3 @@ Ví dụ: application.css sẽ được đổi tên thành
 application-908e25f4bf641868d8683022a5b62f54.css
 ```
 Đoạn hex kia đc gen ra bằng MD5 hexdigest từ nội dung của file.
-
-## Cách dùng 
